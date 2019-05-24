@@ -1,0 +1,17 @@
+<template name="postItem">
+  <view class='post-container'>
+    <view class='post-auth-date'>
+      <image wx:if="{{img_condition}}" class='post-author' src='{{img.author_img}}'></image>
+      <text class='post-date'>{{date}} || {{index+1}}</text>
+    </view>
+    <text class="post-title">{{title}}</text>
+    <image class='post-image' src='{{img.post_img}}'></image>
+    <text class='post-content'>{{content}}</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='/images/icon/1.jpg'></image>
+      <text class='posot-like-font'>{{reading}}</text>
+      <image class='post-like-image' src='/images/icon/2.jpg'></image>
+      <text class='posot-like-font'>{{collection}}</text>
+    </view>
+  </view>
+</template>

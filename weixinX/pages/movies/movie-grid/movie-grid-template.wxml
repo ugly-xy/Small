@@ -1,0 +1,12 @@
+<import src="../movie/movie-template" />
+<template name="movieGridTemplate">
+<scroll-view class='grid-container'
+scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower" 
+bindscrolltoupper="onScrollupper">
+    <block wx:for="{{movies}}" wx:for-item="movie"  wx:key="*this">
+      <view class='single-view-container'>
+          <template is="movieTemplate" data="{{...movie}}" />   
+      </view>
+    </block>
+ </scroll-view>
+</template>
